@@ -6,3 +6,7 @@ Handler returned an error: KeyError: 'stargazers_count'
 Handler returned an error: TypeError: can only concatenate str (not "set") to str
 Handler returned an error: TypeError: can only concatenate str (not "set") to str
 Handler returned an error: TypeError: can only concatenate str (not "set") to str
+Handler returned an error: KeyError: 'stargazers_count'
+Handler returned an error: KeyError: 'stargazers_count'
+Handler returned an error: KeyError: 'stargazers_count'
+Handler returned an error: KeyError: 'stargazers_count'
