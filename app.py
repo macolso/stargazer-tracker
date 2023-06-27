@@ -29,5 +29,5 @@ def handle_request(request):
 
     return Response(200,
             {"content-type": "text/plain"},
-            bytes(f"Here is the stargazer data: {num_stargazers}", "utf-8"))
+            bytes(f"Here is the stargazer count for the " + str(repo) + " repo today ("+str(date.today())+"): "+str(num_stargazers), "utf-8"))
 
