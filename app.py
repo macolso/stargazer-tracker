@@ -8,9 +8,13 @@ import json
 def handle_request(request):
 
     gh_auth_token = config_get("gh_auth_token")
+    owner=config_get("owner")
+    repo=config_get("repo")
+
+    print("https://api.github.com/repos/"+owner+"/"+repo)
 
     response = http_send(
-    Request("GET", "https://api.github.com/repos/fermyon/spin", 
+    Request("GET", "https://api.github.com/repos/"+owner+"/"+repo, 
     {"authorization": 'Bearer '+ gh_auth_token, "User-agent": "curl/7.88.1"}, None))
 
     repo_stats = json.loads(str(response.body, 'utf-8'))
