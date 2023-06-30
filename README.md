@@ -2,12 +2,13 @@
 
 This Spin application pulls the stargazer count of a repo of your choosing for the current day. It then stores the {`date`: `stargazer_count`} pair in a [Spin key-value store](https://developer.fermyon.com/spin/kv-store-tutorial).
 
-> You can see an example running at <https://stargazer-counter.fermyon.app/>
+> You can see an example running at <https://stargazer-counter.fermyon.app/static/index.html>
 
 _Spin features used_
-* [Spin KV Store](https://developer.fermyon.com/spin/kv-store-tutorial)
+* [Spin Key Value Store](https://developer.fermyon.com/spin/kv-store-tutorial)
 * [Variable config](https://developer.fermyon.com/cloud/variables)
 * [Fermyon Cloud Custom Subdomain](https://developer.fermyon.com/cloud/custom-fermyon-subdomain)
+* [Spin's static fileserver template](https://github.com/fermyon/spin-fileserver)
 
 ### Prerequisites
 
