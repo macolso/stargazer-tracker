@@ -1,0 +1,24 @@
+Cannot find file . Attempting fallback.
+Cannot read file: Is a directory (os error 31)
+Cannot find file . Attempting fallback.
+Cannot read file: Is a directory (os error 31)
+Cannot find file /index.html. Attempting fallback.
+Cannot read file: cannot open /index.html
+
+Caused by:
+    No such file or directory (os error 44)
+Cannot find file /index.html. Attempting fallback.
+Cannot read file: cannot open /index.html
+
+Caused by:
+    No such file or directory (os error 44)
+Cannot find file /index.html. Attempting fallback.
+Cannot read file: cannot open /index.html
+
+Caused by:
+    No such file or directory (os error 44)
+Cannot find file /linechart.html. Attempting fallback.
+Cannot read file: cannot open /linechart.html
+
+Caused by:
+    No such file or directory (os error 44)
