@@ -38,7 +38,7 @@ repo = "spin"
 
 Build and deploy Spin app locally:
 ```bash
-SPIN_CONFIG_GH_AUTH_TOKEN="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" spin build --up    
+SPIN_CONFIG_GH_AUTH_TOKEN="{SECRET}" spin build --up    
 ```
 
 Check to see stargazer count:
