@@ -27,3 +27,21 @@ watch = ["app.py", "Pipfile"]
 gh_auth_token = "{{ gh_auth_token }}"
 owner = "fermyon"
 repo = "spin"
+
+[[component]]
+id = "api"
+source = "api/target/api.wasm"
+key_value_stores = ["default"]
+sqlite_databases = ["default"]
+[component.trigger]
+route = "/api/..."
+[component.build]
+command = "npm run build"
+workdir = "api"
+
+[[component]]
+source = { url = "https://github.com/fermyon/spin-fileserver/releases/download/v0.0.2/spin_static_fs.wasm", digest = "sha256:65456bf4e84cf81b62075e761b2b0afaffaef2d0aeda521b245150f76b96421b" }
+id = "chart"
+files = [ { source = "chart/static", destination = "/" } ]
+[component.trigger]
+route = "/static/..."
