@@ -2,7 +2,7 @@
 <html>
 
 <head>
-  <title>Stargazer Count</title>
+  <title>GitHub Repo Stats</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
   <style>
@@ -11,7 +11,7 @@
       color: #fff;
       font-family: Arial, sans-serif;
       text-align: center;
-      overflow: hidden;
+      margin: 0; /* Reset the default margin */
     }
 
     #stars {
@@ -30,19 +30,45 @@
       border-radius: 50%;
     }
 
-    canvas {
-      max-width: 600px;
-      margin: 0 auto;
-      display: block;
+    .chart-container {
+      max-width: 90%; /* Set the maximum width to 90% of the viewport width */
+      margin: 0 5%; /* Add some spacing between charts */
+      display: inline-block; /* Display charts in a row */
+      vertical-align: top; /* Align charts to the top */
+    }
+
+    .chart-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    /* Scrollable container for the entire content */
+    .scroll-container {
+      overflow-x: auto; /* Enable horizontal scrolling */
+      white-space: nowrap; /* Prevent charts from wrapping to the next line */
+      padding: 20px;
     }
   </style>
 </head>
 
 <body>
-  <h1>Stargazer Count</h1>
-  <div class="container">
-    <canvas id="examChart"></canvas>
+  <div class="scroll-container">
+    <h1>Stargazer Count</h1>
+    <div class="chart-container">
+      <div class="chart-title">Chart 1: Stargazer Count</div>
+      <canvas id="chart1"></canvas>
+    </div>
+    <div class="chart-container">
+      <div class="chart-title">Chart 2: Fork Count</div>
+      <canvas id="chart2"></canvas>
+    </div>
+    <div class="chart-container">
+      <div class="chart-title">Chart 3: Open Issues Count</div>
+      <canvas id="chart3"></canvas>
+    </div>
   </div>
+
   <div id="stars"></div>
 
   <script>
@@ -53,40 +79,46 @@
         data.sort(function (a, b) {
           return new Date(b.date) - new Date(a.date)
         })
-        // Create the chart
-        var ctx = document.getElementById("examChart").getContext("2d");
-
-        var myChart = new Chart(ctx, {
-          type: 'line',
-          options: {
-            scales: {
-              xAxes: [{
-                type: 'time',
-                time: {
-                  unit: 'day',
-                  displayFormats: {
-                    'day': 'MMM DD'
-                  }
+        // Create the charts
+        var options = {
+          scales: {
+            xAxes: [{
+              type: 'time',
+              time: {
+                unit: 'day',
+                displayFormats: {
+                  'day': 'MMM DD'
                 }
-              }]
-            }
-          },
-          data: {
-            labels: data.map(k => { return new Date(k.date) }),
-            datasets: [{
-              label: 'Stargazer count',
-              data: data.map(k => { return { t: new Date(k.date), y: k.value } }),
-              backgroundColor: [
-                'rgba(52, 232, 189,0.2)'
-              ],
-              borderColor: [
-                'rgb(52, 232, 189)'
-              ],
-              borderWidth: 1
+              }
             }]
           }
-        });
+        };
+
+        createChart('chart1', 'Stargazer count', data, "stargazer_count");
+        createChart('chart2', 'Fork count', data, "fork_count");
+        createChart('chart3', 'Open issues count', data, "open_issues_count");
       })
+
+    function createChart(chartId, label, data, options) {
+      var ctx = document.getElementById(chartId).getContext("2d");
+      var myChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: data.map(k => { return new Date(k.date) }),
+          datasets: [{
+            label: label,
+            data: data.map(k => { return { t: new Date(k.date), y: k[options] } }),
+            backgroundColor: [
+              'rgba(52, 232, 189,0.2)'
+            ],
+            borderColor: [
+              'rgb(52, 232, 189)'
+            ],
+            borderWidth: 1
+          }]
+        }
+      });
+    }
   </script>
   <script>
     // Create starry background

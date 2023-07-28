@@ -11,7 +11,7 @@ owner = { required = true }
 repo = { required = true }
 
 [[component]]
-id = "star-counter"
+id = "github-repo-stats"
 source = "app.wasm"
 allowed_http_hosts = ["https://api.github.com"]
 sqlite_databases = ["default"]
