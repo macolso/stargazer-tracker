@@ -22,3 +22,12 @@ Cannot read file: cannot open /linechart.html
 
 Caused by:
     No such file or directory (os error 44)
+Cannot find file /html. Attempting fallback.
+Cannot read file: cannot open /html
+
+Caused by:
+    No such file or directory (os error 44)
+Cannot find file . Attempting fallback.
+Cannot read file: Bad file descriptor (os error 8)
+Cannot find file . Attempting fallback.
+Cannot read file: Bad file descriptor (os error 8)

@@ -33,3 +33,28 @@ Handler returned an error: AssertionError: provider error: no provider resolved 
 Handler returned an error: AssertionError: provider error: no provider resolved required variable "gh_auth_token"
 Handler returned an error: AssertionError: provider error: no provider resolved required variable "gh_auth_token"
 Handler returned an error: AssertionError: provider error: no provider resolved required variable "gh_auth_token"
+Handler returned an error: AssertionError: provider error: no provider resolved required variable "gh_auth_token"
+Handler returned an error: AssertionError: provider error: no provider resolved required variable "gh_auth_token"
+Handler returned an error: KeyError: 'stargazers_count'
+Handler returned an error: KeyError: 'stargazers_count'
+Handler returned an error: KeyError: 'stargazers_count'
+Handler returned an error: KeyError: 'stargazers_count'
+Handler returned an error: KeyError: 'stargazers_count'
+Handler returned an error: KeyError: 'stargazers_count'
+Handler returned an error: TypeError: string argument without an encoding
+Handler returned an error: TypeError: SqliteConnection.execute() takes 2 positional arguments but 5 were given
+Handler returned an error: TypeError: SqliteConnection.execute() takes 2 positional arguments but 5 were given
+Handler returned an error: TypeError: SqliteConnection.execute() missing 1 required positional argument: 'parameters'
+Handler returned an error: TypeError: SqliteConnection.execute() missing 1 required positional argument: 'parameters'
+Handler returned an error: TypeError: SqliteConnection.execute() missing 1 required positional argument: 'parameters'
+Handler returned an error: TypeError: SqliteConnection.execute() missing 1 required positional argument: 'parameters'
+Handler returned an error: TypeError: SqliteConnection.execute() missing 1 required positional argument: 'parameters'
+Handler returned an error: TypeError: SqliteConnection.execute() takes 2 positional arguments but 5 were given
+Handler returned an error: TypeError: SqliteConnection.execute() takes 2 positional arguments but 5 were given
+Handler returned an error: TypeError: SqliteConnection.execute() takes 2 positional arguments but 5 were given
+Handler returned an error: AssertionError: Unable to use datetime.date(2023, 7, 28) as a SQLite `execute` parameter -- expected `int`, `float`, `bytes`, `string`, or `None`
+Handler returned an error: AssertionError: Error::Io("table ghstats has no column named open_issues_count")
+Handler returned an error: AssertionError: Error::Io("table ghstats has no column named open_issues_count")
+Handler returned an error: TypeError: SqliteConnection.execute() missing 1 required positional argument: 'parameters'
+Handler returned an error: ValueError: Can't extract `str` to `Vec`
+Handler returned an error: AssertionError: Error::Io("UNIQUE constraint failed: gh_stats_v2.date")
