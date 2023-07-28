@@ -208,3 +208,21 @@ Num of stargazers: 193
 Num of stargazers: 210
 Date: 2023-07-28
 [['2023-07-28', 3858, 193, 210]]
+https://api.github.com/repos/fermyon/spin
+Num of stargazers: 3862
+Num of stargazers: 193
+Num of stargazers: 210
+Date: 2023-07-28
+[['2023-07-28', 3862, 193, 210]]
+https://api.github.com/repos/fermyon/spin
+Num of stargazers: 3862
+Num of stargazers: 193
+Num of stargazers: 210
+Date: 2023-07-28
+[['2023-07-28', 3862, 193, 210]]
+https://api.github.com/repos/fermyon/spin
+Num of stargazers: 3862
+Num of stargazers: 193
+Num of stargazers: 210
+Date: 2023-07-28
+[['2023-07-28', 3862, 193, 210]]
